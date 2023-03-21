@@ -16,6 +16,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        guard let baseURL = URL(string: "https://pokeapi.co/api/v2/") else { return }
+        
+        WebService().getPokemons(url: baseURL) { (pokemons) in
+            if let pokemons = pokemons {
+            
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! PokemonTableViewCell
     
-        cell.imageView?.image = UIImage(named: <#T##String#>)
+        return cell
     }
 
 
