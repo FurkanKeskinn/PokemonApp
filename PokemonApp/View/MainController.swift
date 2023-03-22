@@ -7,32 +7,35 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var pokemonList = [Pokemons.Pokemon]()
+    var viewModel : ListViewModel = PokemonListViewModel()
 
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         tableView.delegate = self
         tableView.dataSource = self
+        viewModel.getList()
         
-        guard let baseURL = URL(string: "https://pokeapi.co/api/v2/") else { return }
-        
-        WebService().getPokemons(url: baseURL) { (pokemons) in
-            if let pokemons = pokemons {
-            
-            }
-        }
     }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return pokemonList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! PokemonTableViewCell
     
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
 
 

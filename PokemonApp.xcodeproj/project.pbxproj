@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC46303129CB06D3004BAC2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46303029CB06D3004BAC2D /* Constants.swift */; };
+		DC46303429CB31D7004BAC2D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DC46303329CB31D7004BAC2D /* SDWebImage */; };
+		DC46303729CB4DBC004BAC2D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46303629CB4DBC004BAC2D /* Protocol.swift */; };
 		DC4C9FE729CA174E008970FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9FE629CA174E008970FC /* AppDelegate.swift */; };
 		DC4C9FE929CA174E008970FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9FE829CA174E008970FC /* SceneDelegate.swift */; };
-		DC4C9FEB29CA174E008970FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9FEA29CA174E008970FC /* ViewController.swift */; };
+		DC4C9FEB29CA174E008970FC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9FEA29CA174E008970FC /* MainController.swift */; };
 		DC4C9FEE29CA174E008970FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4C9FEC29CA174E008970FC /* Main.storyboard */; };
 		DC4C9FF029CA174F008970FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4C9FEF29CA174F008970FC /* Assets.xcassets */; };
 		DC4C9FF329CA174F008970FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4C9FF129CA174F008970FC /* LaunchScreen.storyboard */; };
 		DC4C9FFB29CA1B1A008970FC /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9FFA29CA1B1A008970FC /* PokemonTableViewCell.swift */; };
 		DC4CA00329CA2465008970FC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA00229CA2465008970FC /* Pokemon.swift */; };
 		DC4CA00529CA413D008970FC /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA00429CA413D008970FC /* WebService.swift */; };
+		DC4CA00729CA507D008970FC /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA00629CA507D008970FC /* PokemonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC46303029CB06D3004BAC2D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DC46303629CB4DBC004BAC2D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		DC4C9FE329CA174E008970FC /* PokemonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4C9FE629CA174E008970FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC4C9FE829CA174E008970FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC4C9FEA29CA174E008970FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC4C9FEA29CA174E008970FC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		DC4C9FED29CA174E008970FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC4C9FEF29CA174F008970FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC4C9FF229CA174F008970FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +36,7 @@
 		DC4C9FFA29CA1B1A008970FC /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		DC4CA00229CA2465008970FC /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		DC4CA00429CA413D008970FC /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		DC4CA00629CA507D008970FC /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,12 +44,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC46303429CB31D7004BAC2D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC46302F29CB06C4004BAC2D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DC46303029CB06D3004BAC2D /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DC46303529CB4D91004BAC2D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DC46303629CB4DBC004BAC2D /* Protocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		DC4C9FDA29CA174E008970FC = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +86,14 @@
 		DC4C9FE529CA174E008970FC /* PokemonApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC46303529CB4D91004BAC2D /* Protocol */,
+				DC46302F29CB06C4004BAC2D /* Constants */,
 				DC4C9FFF29CA23A3008970FC /* Service */,
 				DC4C9FFC29CA237A008970FC /* Model */,
 				DC4C9FFD29CA2384008970FC /* ViewModel */,
 				DC4C9FFE29CA2397008970FC /* View */,
-				DC4C9FEC29CA174E008970FC /* Main.storyboard */,
 				DC4C9FEF29CA174F008970FC /* Assets.xcassets */,
+				DC4C9FEC29CA174E008970FC /* Main.storyboard */,
 				DC4C9FF129CA174F008970FC /* LaunchScreen.storyboard */,
 				DC4C9FF429CA174F008970FC /* Info.plist */,
 			);
@@ -85,6 +111,7 @@
 		DC4C9FFD29CA2384008970FC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DC4CA00629CA507D008970FC /* PokemonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -94,7 +121,7 @@
 			children = (
 				DC4C9FE629CA174E008970FC /* AppDelegate.swift */,
 				DC4C9FE829CA174E008970FC /* SceneDelegate.swift */,
-				DC4C9FEA29CA174E008970FC /* ViewController.swift */,
+				DC4C9FEA29CA174E008970FC /* MainController.swift */,
 				DC4C9FFA29CA1B1A008970FC /* PokemonTableViewCell.swift */,
 			);
 			path = View;
@@ -124,6 +151,9 @@
 			dependencies = (
 			);
 			name = PokemonApp;
+			packageProductDependencies = (
+				DC46303329CB31D7004BAC2D /* SDWebImage */,
+			);
 			productName = PokemonApp;
 			productReference = DC4C9FE329CA174E008970FC /* PokemonApp.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +182,9 @@
 				Base,
 			);
 			mainGroup = DC4C9FDA29CA174E008970FC;
+			packageReferences = (
+				DC46303229CB31D7004BAC2D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = DC4C9FE429CA174E008970FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,10 +214,13 @@
 			files = (
 				DC4CA00529CA413D008970FC /* WebService.swift in Sources */,
 				DC4CA00329CA2465008970FC /* Pokemon.swift in Sources */,
-				DC4C9FEB29CA174E008970FC /* ViewController.swift in Sources */,
+				DC4C9FEB29CA174E008970FC /* MainController.swift in Sources */,
+				DC4CA00729CA507D008970FC /* PokemonViewModel.swift in Sources */,
 				DC4C9FFB29CA1B1A008970FC /* PokemonTableViewCell.swift in Sources */,
+				DC46303729CB4DBC004BAC2D /* Protocol.swift in Sources */,
 				DC4C9FE729CA174E008970FC /* AppDelegate.swift in Sources */,
 				DC4C9FE929CA174E008970FC /* SceneDelegate.swift in Sources */,
+				DC46303129CB06D3004BAC2D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC46303229CB31D7004BAC2D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC46303329CB31D7004BAC2D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC46303229CB31D7004BAC2D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC4C9FDB29CA174E008970FC /* Project object */;
 }
