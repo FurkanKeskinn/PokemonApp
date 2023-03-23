@@ -8,36 +8,6 @@
 import Foundation
 import UIKit
 
-/*struct PokemonList : Decodable{
-    let id: Int
-    let name: String
-    let sprites: Sprites
-    
-    struct Sprites: Decodable {
-        let image: String
-       
-    }
-}
-
-struct PokemonDetail : Decodable{
-    let id: Int
-    let name: String
-    let abilities: [Abilities]
-    let sprites: Sprites
-    
-    struct Abilities: Decodable {
-        let ability: Ability
-        struct Ability : Decodable{
-            let name : String
-        }
-    }
-    
-    struct Sprites: Decodable {
-        let image: String
-       
-    }
-}*/
-
 struct Pokemons: Decodable {
     let count: Int
     let results: [Pokemon]
@@ -47,9 +17,9 @@ struct Pokemons: Decodable {
         let url: String
     }
 }
+
 struct PokemonDetails: Decodable {
     let abilities: [Ability]
-    let id: Int
     let name: String
     let sprites: Sprites
 
@@ -58,12 +28,11 @@ struct PokemonDetails: Decodable {
         
         struct Species: Decodable {
             let name: String
+            let url : String
         }
     }
-    
-    struct Sprites: Decodable {
-        let frontDefault: String
-    }
+    struct Sprites : Decodable {
+        let front_default : String
+
+        }
 }
-
-

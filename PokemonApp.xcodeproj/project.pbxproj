@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC04FE3629CBA3B900840BBB /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04FE3529CBA3B900840BBB /* DetailsController.swift */; };
 		DC46303129CB06D3004BAC2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46303029CB06D3004BAC2D /* Constants.swift */; };
 		DC46303429CB31D7004BAC2D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DC46303329CB31D7004BAC2D /* SDWebImage */; };
 		DC46303729CB4DBC004BAC2D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46303629CB4DBC004BAC2D /* Protocol.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC04FE3529CBA3B900840BBB /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
 		DC46303029CB06D3004BAC2D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC46303629CB4DBC004BAC2D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		DC4C9FE329CA174E008970FC /* PokemonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +88,8 @@
 		DC4C9FE529CA174E008970FC /* PokemonApp */ = {
 			isa = PBXGroup;
 			children = (
-				DC46303529CB4D91004BAC2D /* Protocol */,
 				DC46302F29CB06C4004BAC2D /* Constants */,
+				DC46303529CB4D91004BAC2D /* Protocol */,
 				DC4C9FFF29CA23A3008970FC /* Service */,
 				DC4C9FFC29CA237A008970FC /* Model */,
 				DC4C9FFD29CA2384008970FC /* ViewModel */,
@@ -123,6 +125,7 @@
 				DC4C9FE829CA174E008970FC /* SceneDelegate.swift */,
 				DC4C9FEA29CA174E008970FC /* MainController.swift */,
 				DC4C9FFA29CA1B1A008970FC /* PokemonTableViewCell.swift */,
+				DC04FE3529CBA3B900840BBB /* DetailsController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				DC4CA00529CA413D008970FC /* WebService.swift in Sources */,
 				DC4CA00329CA2465008970FC /* Pokemon.swift in Sources */,
+				DC04FE3629CBA3B900840BBB /* DetailsController.swift in Sources */,
 				DC4C9FEB29CA174E008970FC /* MainController.swift in Sources */,
 				DC4CA00729CA507D008970FC /* PokemonViewModel.swift in Sources */,
 				DC4C9FFB29CA1B1A008970FC /* PokemonTableViewCell.swift in Sources */,

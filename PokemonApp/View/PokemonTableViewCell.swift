@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PokemonTableViewCell: UITableViewCell {
 
@@ -14,16 +15,22 @@ class PokemonTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameText: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
+    func getData(url: String){
+        WebService().getPokemonsDetail(stringURL: url) {
+            pokemon in
+            DispatchQueue.main.async {
+                self.nameText?.text = pokemon.name
+                self.imageViewCell?.sd_setImage(with: URL(string: pokemon.sprites.front_default))
+            }
+        }
+    }
 }

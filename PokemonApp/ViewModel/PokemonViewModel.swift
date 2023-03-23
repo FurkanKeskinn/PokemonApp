@@ -7,39 +7,49 @@
 
 import Foundation
 
-class PokemonListViewModel: ListViewModel{
+class PokemonListViewModel: PokemonsViewModelProtocol{
     
     
-   lazy var listAPI: WEBService = WebService()
-    var listView: ListOut?
+   lazy var servicePokemon: ApiServicePokemonProtocol = WebService()
+    var bindPokemonData: PokemonData?
     
     init() {
-        self.listAPI = WebService()
+        self.servicePokemon = WebService()
     }
     
-    func getList(){
-        listAPI.getPokemons{ result in
+    func getPokemonsViewModel(){
+        servicePokemon.getPokemons{ result in
             switch result {
-            case .success(let pokemonList) : self.listView?.save(list: pokemonList)
+            case .success(let pokemonList) :
+                self.bindPokemonData?.getDataPokemons(data: pokemonList)
             case .failure(let error):
                 print(error)
             }
         }
     }
-}
-struct PokemonViewModel {
-    let pokemonDetail : PokemonDetails
+    func Delegates(delegate: PokemonData) {
+        self.bindPokemonData = delegate
+    }
     
-    var id : Int {
-        return self.pokemonDetail.id
+}
+class PokemonViewModel : DetailPokemonViewModelProtocol{
+    
+    var bindPokemonDetailData: DetailPokemonData?
+    var serviceDetailPokemon: DetailApiServicePokemonProtocol = WebService()
+    
+    init() {
+        serviceDetailPokemon = WebService()
     }
-    var name : String {
-        return self.pokemonDetail.name
+    
+    func DelegateDetail(delegate: DetailPokemonData) {
+        self.bindPokemonDetailData = delegate
     }
-    var image : PokemonDetails.Sprites{
-        return self.pokemonDetail.sprites
+    
+    func getDetailPokemon(url: String) {
+        serviceDetailPokemon.getPokemonsDetail(stringURL: url) { result in
+            self.bindPokemonDetailData?.detailData(name: result.name, abilities: result.abilities, sprites: result.sprites.front_default)
+        }
     }
-    var ability : String {
-        return self.pokemonDetail.abilities[0].ability.name
-    }
+    
+    
 }

@@ -7,20 +7,28 @@
 
 import Foundation
 
-protocol WEBService{
-    func getPokemons(completion: @escaping (Result<[Pokemons.Pokemon], WebService.NetworkError>) -> Void)
-    
-    
+protocol ApiServicePokemonProtocol{
+func getPokemons(completion: @escaping (Result<[Pokemons.Pokemon], WebService.NetworkError>) -> Void)
+}
+protocol PokemonsViewModelProtocol{
+func getPokemonsViewModel()
+var servicePokemon : ApiServicePokemonProtocol {get}
+var bindPokemonData : PokemonData? {get}
+func Delegates(delegate : PokemonData)
+}
+protocol PokemonData {
+func getDataPokemons(data : [Pokemons.Pokemon])
 }
 
-protocol ListViewModel{
-    func getList()
-    
-    var listAPI : WEBService {get}
-    var listView : ListOut? {get}
-    
-    
+protocol DetailApiServicePokemonProtocol{
+func getPokemonsDetail(stringURL: String, completion: @escaping (PokemonDetails) -> Void)
 }
-protocol ListOut {
-    func save(list : [Pokemons.Pokemon])
+protocol DetailPokemonViewModelProtocol{
+    var bindPokemonDetailData : DetailPokemonData? {get}
+    var serviceDetailPokemon : DetailApiServicePokemonProtocol {get}
+    func getDetailPokemon(url: String)
+    func DelegateDetail(delegate : DetailPokemonData)
+}
+protocol DetailPokemonData{
+    func detailData(name: String, abilities: [PokemonDetails.Ability], sprites:     String)
 }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class WebService: WEBService{
+class WebService: ApiServicePokemonProtocol, DetailApiServicePokemonProtocol{
     
     enum NetworkError : Error {
         case invalidURL
@@ -27,7 +27,8 @@ class WebService: WEBService{
                 completion(.failure(.fetchingError));
                 return
             }else if let data = data{
-             let pokemonList = try? JSONDecoder().decode(Pokemons.self, from: data)
+             let pokemonList = try? JSONDecoder().decode(
+                Pokemons.self, from: data)
                 print(pokemonList)
                 if let pokemonList = pokemonList {
                     completion(.success(pokemonList.results))
@@ -38,4 +39,23 @@ class WebService: WEBService{
         }
         .resume()
     }
+    
+    func getPokemonsDetail(stringURL : String, completion : @escaping(PokemonDetails) -> Void){
+        
+        guard let url = URL(string: stringURL) else {return}
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {return}
+            guard error == nil else {return}
+            let dataPokemon = try? JSONDecoder().decode(
+                PokemonDetails.self, from: data)
+            print(dataPokemon)
+            if let dataPokemon = dataPokemon{
+                completion(dataPokemon)
+            }else{
+                print(NetworkError.serverError)
+            }
+        }
+        .resume()
+    }
+    
 }
