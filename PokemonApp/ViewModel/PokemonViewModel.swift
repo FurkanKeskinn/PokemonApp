@@ -50,6 +50,4 @@ class PokemonViewModel : DetailPokemonViewModelProtocol{
             self.bindPokemonDetailData?.detailData(name: result.name, abilities: result.abilities, sprites: result.sprites.front_default)
         }
     }
-    
-    
 }

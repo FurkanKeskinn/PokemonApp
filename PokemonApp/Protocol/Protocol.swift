@@ -8,20 +8,20 @@
 import Foundation
 
 protocol ApiServicePokemonProtocol{
-func getPokemons(completion: @escaping (Result<[Pokemons.Pokemon], WebService.NetworkError>) -> Void)
+    func getPokemons(completion: @escaping (Result<[Pokemons.Pokemon], WebService.NetworkError>) -> Void)
 }
 protocol PokemonsViewModelProtocol{
-func getPokemonsViewModel()
-var servicePokemon : ApiServicePokemonProtocol {get}
-var bindPokemonData : PokemonData? {get}
-func Delegates(delegate : PokemonData)
+    func getPokemonsViewModel()
+    var servicePokemon : ApiServicePokemonProtocol {get}
+    var bindPokemonData : PokemonData? {get}
+    func Delegates(delegate : PokemonData)
 }
 protocol PokemonData {
-func getDataPokemons(data : [Pokemons.Pokemon])
+    func getDataPokemons(data : [Pokemons.Pokemon])
 }
 
 protocol DetailApiServicePokemonProtocol{
-func getPokemonsDetail(stringURL: String, completion: @escaping (PokemonDetails) -> Void)
+    func getPokemonsDetail(stringURL: String, completion: @escaping (PokemonDetails) -> Void)
 }
 protocol DetailPokemonViewModelProtocol{
     var bindPokemonDetailData : DetailPokemonData? {get}

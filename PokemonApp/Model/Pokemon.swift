@@ -17,7 +17,6 @@ struct Pokemons: Decodable {
         let url: String
     }
 }
-
 struct PokemonDetails: Decodable {
     let abilities: [Ability]
     let name: String

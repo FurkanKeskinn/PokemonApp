@@ -14,7 +14,6 @@ class WebService: ApiServicePokemonProtocol, DetailApiServicePokemonProtocol{
         case fetchingError
     }
 
-    
     func getPokemons(completion: @escaping (Result<[Pokemons.Pokemon], NetworkError>) -> Void) {
         
         guard let url = Constants.API.baseAPI else{

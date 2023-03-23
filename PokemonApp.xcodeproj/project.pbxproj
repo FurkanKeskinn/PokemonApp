@@ -121,11 +121,10 @@
 		DC4C9FFE29CA2397008970FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DCE5ED6229CC81830074F742 /* Controller */,
+				DCE5ED6329CC81A10074F742 /* Cell */,
 				DC4C9FE629CA174E008970FC /* AppDelegate.swift */,
 				DC4C9FE829CA174E008970FC /* SceneDelegate.swift */,
-				DC4C9FEA29CA174E008970FC /* MainController.swift */,
-				DC4C9FFA29CA1B1A008970FC /* PokemonTableViewCell.swift */,
-				DC04FE3529CBA3B900840BBB /* DetailsController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +135,23 @@
 				DC4CA00429CA413D008970FC /* WebService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		DCE5ED6229CC81830074F742 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC4C9FEA29CA174E008970FC /* MainController.swift */,
+				DC04FE3529CBA3B900840BBB /* DetailsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DCE5ED6329CC81A10074F742 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC4C9FFA29CA1B1A008970FC /* PokemonTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

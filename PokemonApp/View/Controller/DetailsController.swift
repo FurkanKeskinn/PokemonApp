@@ -9,8 +9,6 @@ import UIKit
 
 class DetailsController: UIViewController, UITableViewDelegate, UITableViewDataSource, DetailPokemonData {
     
-    
-    
     private var viewModel : DetailPokemonViewModelProtocol = PokemonViewModel()
     private var abilities = [PokemonDetails.Ability]()
 
